@@ -1,3 +1,5 @@
+package core;
+
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -5,9 +7,12 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-public class ServerExample {
+public class GrpcServer {
 
-    private static final Logger logger = Logger.getLogger(ServerExample.class.getName());
+    // ------------------------------------------------------------------------------------------
+    // Utility methods to start up server
+
+    private static final Logger logger = Logger.getLogger(GrpcServer.class.getName());
 
     private final int port = 8080;
     private final Server server = ServerBuilder.forPort(port).build();
@@ -18,7 +23,7 @@ public class ServerExample {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.err.println("*** shutting down gRPC server since JVM is shutting down");
             try {
-                ServerExample.this.stop();
+                GrpcServer.this.stop();
             } catch (InterruptedException e) {
                 e.printStackTrace(System.err);
             }
@@ -37,4 +42,6 @@ public class ServerExample {
             server.awaitTermination();
         }
     }
+
+    // ------------------------------------------------------------------------------------------
 }
