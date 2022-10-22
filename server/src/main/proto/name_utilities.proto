@@ -9,9 +9,7 @@ option java_generic_services = true;
 package nameutilities;
 
 service NameUtilities {
-
   rpc GetNameByPrefix(Prefix) returns (Name) {}
-
 }
 
 message Prefix {
