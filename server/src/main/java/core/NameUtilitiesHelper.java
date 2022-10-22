@@ -6,7 +6,7 @@ import services.Prefix;
 import java.util.List;
 import java.util.Optional;
 
-public class NameUtilities {
+public class NameUtilitiesHelper {
 
   private static final List<String> names =
       List.of("Abigail", "Berta", "Catherine", "Debbie", "James", "Jack", "Xavier");

@@ -7,6 +7,7 @@ services/NameUtilities$Stub.class
 services/Prefix$1.class
 services/NameUtilities$BlockingStub.class
 services/NameUtilities$2.class
+core/NameUtilitiesServer.class
 services/Name$Builder.class
 services/NameUtilities.class
 services/NameUtilitiesProto.class
@@ -15,4 +16,5 @@ services/Prefix$Builder.class
 services/NameUtilities$BlockingInterface.class
 services/PrefixOrBuilder.class
 core/GrpcServer.class
+core/NameUtilitiesHelper.class
 services/NameUtilities$Interface.class

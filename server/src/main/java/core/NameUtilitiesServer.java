@@ -9,6 +9,6 @@ import services.Prefix;
 public class NameUtilitiesServer implements NameUtilities.Interface {
   @Override
   public void getNameByPrefix(RpcController controller, Prefix request, RpcCallback<Name> done) {
-    done.run(core.NameUtilities.getNameByPrefix(request));
+    done.run(NameUtilitiesHelper.getNameByPrefix(request));
   }
 }
