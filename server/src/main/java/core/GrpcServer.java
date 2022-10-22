@@ -19,8 +19,8 @@ public class GrpcServer {
   private final int port = 8080;
   private final Server server =
       ServerBuilder.forPort(port)
+          .addService(new NameUtilitiesService())
           .addService(ProtoReflectionService.newInstance())
-          //          .addService()
           .build();
 
   public void start() throws IOException {
