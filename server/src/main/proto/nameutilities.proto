@@ -1,12 +1,13 @@
 syntax = "proto3";
 
+package nameutilities;
+
 option java_multiple_files = true;
 option java_package = "services";
 option java_outer_classname = "NameUtilitiesProto";
-option objc_class_prefix = "NU";
-option java_generic_services = true;
+//option objc_class_prefix = "NU";
 
-package nameutilities;
+//package name.utilities;
 
 service NameUtilities {
   rpc GetNameByPrefix(Prefix) returns (Name) {}

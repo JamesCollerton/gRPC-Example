@@ -3,7 +3,6 @@ package core;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.protobuf.services.ProtoReflectionService;
-import services.NameUtilitiesProto;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +18,7 @@ public class GrpcServer {
   private final int port = 8080;
   private final Server server =
       ServerBuilder.forPort(port)
-          .addService(new NameUtilitiesService())
+          .addService(new NameUtilitiesServer())
           .addService(ProtoReflectionService.newInstance())
           .build();
 

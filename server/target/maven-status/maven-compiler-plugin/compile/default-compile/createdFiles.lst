@@ -1,8 +1,9 @@
+client/NameUtilitiesClient.class
 services/Prefix.class
 services/NameUtilities$1.class
 services/Prefix$1.class
 services/NameUtilities$BlockingStub.class
-core/NameUtilitiesService.class
+core/NameUtilitiesServer.class
 services/NameOrBuilder.class
 services/NameUtilitiesGrpc$NameUtilitiesStub.class
 core/NameUtilitiesHelper.class

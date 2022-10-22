@@ -2,11 +2,7 @@ package core;
 
 import services.NameUtilitiesGrpc;
 
-public final class NameUtilitiesService extends NameUtilitiesGrpc.NameUtilitiesImplBase {
-
-  NameUtilitiesService() {
-    System.out.println("Making service");
-  }
+public final class NameUtilitiesServer extends NameUtilitiesGrpc.NameUtilitiesImplBase {
 
   @Override
   public void getNameByPrefix(
