@@ -6,6 +6,9 @@ import services.Prefix;
 import java.util.List;
 import java.util.Optional;
 
+/*
+ Helper class which acts as a spoof repository/ service layer. Simply used to look up a name by a prefix.
+*/
 public class NameUtilitiesHelper {
 
   private static final List<String> names =

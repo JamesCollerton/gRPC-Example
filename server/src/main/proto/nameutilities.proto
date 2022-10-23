@@ -2,17 +2,28 @@ syntax = "proto3";
 
 package nameutilities;
 
+/*
+  Here we define some options we would like to use. It is
+  more convenient to have our proto file compiled into separate
+  Java files, and we can even say which package we would like
+  to compile into
+ */
 option java_multiple_files = true;
 option java_package = "services";
 option java_outer_classname = "NameUtilitiesProto";
-//option objc_class_prefix = "NU";
 
-//package name.utilities;
-
+/*
+  This is our service we will be exposing via gRPC. It takes in
+  one of the objects defined below, and returns the other.
+ */
 service NameUtilities {
   rpc GetNameByPrefix(Prefix) returns (Name) {}
 }
 
+/*
+  Here we define some objects for use in our program, notice how
+  we reference them from our service
+ */
 message Prefix {
   string prefix = 1;
 }
